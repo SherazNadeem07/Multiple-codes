@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+
+<body>
+
+    <!--Simple calculator code-->
+
+
+    <h1>Simple Calculator</h1>
+
+    <label>Enter Any Number<input type="number" name="first" id="first" step="any"></label><br><br>
+    <label>Enter Any Number<input type="number" name="second" id="second" step="any"></label><br><br>
+    <select name="ope" id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select> <br><br>
+    <button onclick="cal()">Calulate</button>
+    <input type="text" name="res" id="res" readonly="">
+    <script type="text/javascript">
+        function cal() {
+            var num1 = document.getElementById("first").value;
+            var num2 = document.getElementById("second").value;
+            var ope = document.getElementById("ope").value;
+
+            if (ope === "+") {
+                var res = parseInt(num1) + parseInt(num2);
+            } else if (ope === "-") {
+                var res = parseInt(num1) - parseInt(num2);
+            } else if (ope === "*") {
+                var res = parseInt(num1) * parseInt(num2);
+            } else if (ope === "/") {
+                var res = parseInt(num1) / parseInt(num2);
+            }
+            document.getElementById("res").value = res;
+        }
+
+
+    </script>
+
+
+    <!--City code-->
+
+    <script>
+        var a = prompt("Enter your city name");
+
+        if (a === "karachi") {
+            document.write("Welcome to the city of lights");
+        } else {
+            document.write("Welcome to" + a);
+        }
+    </script>
+
+    <!--Gender code-->
+
+    <script>
+        var b = prompt("Enter your Gender");
+
+        if (b === "male") {
+            document.write("Good Morning Sir");
+        } else {
+            document.write("Good Morning Maam");
+        }
+    </script>
+
+    <!--Traffic code-->
+
+    <script>
+        var c = prompt("Enter a Traffic Color like(Red,Yellow,Green)");
+
+        if (c === "red") {
+            document.write("signal color red message must stop");
+        } else if (c === "yellow") {
+            document.write("Signal Color  yellow message  ready to move");
+        } else if (c === "green") {
+            document.write("signal color green message move now");
+        }
+        else {
+            document.write("wrong input");
+        }
+    </script>
+
+
+</body>
+
+</html>
